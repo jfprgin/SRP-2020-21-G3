@@ -16,9 +16,9 @@ module.exports = ({ app, HttpLogger: logger }) => {
   app.use(express.urlencoded({ extended: false }));
   app.use(
     jwt({
-      algortihms: config.jwt.algorithms,
+      algorithms: config.jwt.algorithms,
       secret: config.jwt.secret,
-  }).unless(config.jwl.exclude)
+  }).unless(config.jwt.exclude)
 );
 
   //---------------------------
